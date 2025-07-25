@@ -1,0 +1,23 @@
+# Ignorar carpeta de configuración del proyecto NetBeans
+nbproject/
+
+# Ignorar archivos de compilación de NetBeans
+build/
+dist/
+
+# Ignorar archivos compilados de Java
+*.class
+
+# Ignorar archivos de log
+*.log
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Ignorar carpetas de entorno virtual o configuración
+*.iml
+.idea/
+*.ipr
+*.iws
+.vscode/

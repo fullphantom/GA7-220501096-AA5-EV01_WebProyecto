@@ -1,0 +1,404 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #fff8e1;
+}
+
+/* Body con flex para empujar footer abajo */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header */
+header {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: black;
+  gap: 15px;
+}
+
+.logo {
+  width: 50px;
+  height: auto;
+}
+
+ .titulo, h1 {
+  font-size: 24px;
+  color: rgb(248, 248, 3);
+  font-weight: 700;
+  text-decoration: none;
+  text-align: center;
+  border-top: 30px;
+
+}
+.ingreso {
+  font-size: 24px;
+  color: rgb(126, 249, 4);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* Navegación */
+.navegacion {
+  background-color: #333;
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.nav_enlace_boton {
+  color: yellow;
+  background-color: black;
+  padding: 8px 15px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.nav_enlace_boton:hover {
+  background-color: yellow;
+  color: black;
+}
+
+.header-right {
+  margin-left: auto;
+}
+
+.btn-cerrar-sesion{
+  color: rgb(8, 8, 8);
+  background-color: rgb(247, 68, 52);
+  padding: 8px 15px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.btn-cerrar-sesion:hover{
+  background-color: yellow;
+  color: black;
+}
+
+/* Main con fondo y centrado */
+main.contacto-contenedor {
+  flex-grow: 1;
+  padding: 40px 20px;
+  background-image: url('img/fondo_restaurante.png');
+  background-size: cover;
+  background-position: center;
+  color: #333;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.4;
+
+  /* Centrar contenido */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 80vh; /* altura para centrar sin que footer interfiera */
+}
+
+/* Texto de bienvenida centrado */
+.texto-bienvenida {
+  background-color: rgba(247, 244, 244, 0.85);
+  border-radius: 20px;
+  font-size: 40px;
+  padding: 20px 40px;
+  max-width: 700px;
+}
+
+/* Footer */
+footer.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 12px 0;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.pie_pagina {
+  margin: 0;
+}
+
+/* -------------------- */
+/* Estilos para inicio.php con login y registro */
+
+.container-form {
+  width: 90%;
+  max-width: 900px;
+  margin: 30px auto 50px auto;
+  display: flex;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  overflow: hidden;
+
+  /* Animación: altura y opacidad */
+  max-height: 1000px;
+  opacity: 1;
+  transition: max-height 0.6s ease, opacity 0.6s ease;
+}
+
+.information, .form-information {
+  flex: 1;
+  background-color: black;
+  color: white;
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-information {
+  background-color: white;
+  color: #333;
+}
+
+/* Ocultar con animación */
+.hide {
+  max-height: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.container-form .logo {
+  width: 100px;
+  margin-bottom: 20px;
+}
+
+.information h2,
+.form-information h2 {
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.information p,
+.form-information p {
+  margin-bottom: 25px;
+  font-weight: 500;
+  text-align: center;
+  font-size: 16px;
+}
+
+.information button {
+  padding: 10px 25px;
+  border: none;
+  background-color: white;
+  color: black;
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: 25px;
+  transition: background-color 0.3s;
+}
+
+.information button:hover {
+  background-color: yellow;
+  color: black;
+  font-weight: bold;
+}
+
+.icons {
+  display: flex;
+  gap: 15px;
+  font-size: 28px;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.icons i {
+  cursor: pointer;
+  color: #f4a261;
+  transition: color 0.3s;
+}
+
+.icons i:hover {
+  color: #e76f51;
+}
+
+.form {
+  width: 100%;
+}
+
+.form label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #ddd;
+}
+
+.form label i {
+  margin-right: 10px;
+  color: #f4a261;
+  font-size: 20px;
+}
+
+.form input {
+  flex: 1;
+  border: none;
+  padding: 8px 5px;
+  font-size: 16px;
+  outline: none;
+}
+
+.form button {
+  width: 100%;
+  padding: 12px;
+  background-color: black;
+  border: none;
+  border-radius: 25px;
+  color: white;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+}
+
+.form button:hover {
+  background-color: tomato;
+  color: black;
+}
+
+.mensaje-error {
+  background-color: #f8d7da;
+  color: #842029;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Responsivo básico */
+@media screen and (max-width: 768px) {
+  .container-form {
+    flex-direction: column;
+  }
+
+  .information, .form-information {
+    padding: 30px 20px;
+  }
+}
+
+/* ------------------------ */
+/* Estilos para la tabla de usuarios */
+
+table {
+  width: 95%;
+  margin: 30px auto;
+  border-collapse: collapse;
+  background-color: #fffdf5;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  font-size: 16px;
+}
+
+thead {
+  background-color: black;
+  color: yellow;
+}
+
+th, td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+.actions a {
+  margin: 0 5px;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 14px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.actions .edit {
+  background-color: #4caf50;
+  color: white;
+}
+
+.actions .edit:hover {
+  background-color: #45a049;
+}
+
+.actions .delete {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.actions .delete:hover {
+  background-color: #c0392b;
+}
+
+/* Footer estilo para tabla */
+.footerTabla {
+  background-color: black;
+  color: yellow;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 14px;
+}
+
+main {
+  flex: 1;
+  padding: 20px;
+}
+
+/*-----------------boton cerrrar sesion datos usuarios--------------------------------*/
+
+header {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: black;
+  gap: 15px;
+}
+
+.header-right {
+  margin-left: auto;
+}
+
+.btn-cerrar-sesion {
+  color: rgb(8, 8, 8);
+  background-color: rgb(247, 68, 52); /* rojo */
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: background-color 0.3s;
+  border: none;  /* importante para que no aparezca borde por defecto */
+  cursor: pointer;
+}
+
+.btn-cerrar-sesion:hover {
+  background-color: yellow;
+  color: black;
+}
+
+/*------------------------mensaje  ingreso exitoso-------------------*/
+
+
+.mensaje-exito{
+    color: rgb(5, 245, 13);
+}
+.titulo-tabla{
+  text-align: center;
+}

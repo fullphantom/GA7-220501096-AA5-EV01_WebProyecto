@@ -1,0 +1,27 @@
+SCRIPT BASE DE DATOS RESTAURANTE
+
+CREATE DATABASE IF NOT EXISTS restaurante;
+USE restaurante;
+
+CREATE TABLE tipo_usuario (
+  Id_tipo_usuario INT NOT NULL AUTO_INCREMENT,
+  tipo VARCHAR(45),
+  PRIMARY KEY (Id_tipo_usuario)
+) ENGINE=InnoDB;
+
+CREATE TABLE usuario (
+  Id_usuario INT NOT NULL AUTO_INCREMENT,
+  Id_tipo_usuario INT NOT NULL,
+  Nombre VARCHAR(45),
+  Apellido VARCHAR(45),
+  Direccion VARCHAR(100),
+  Telefono VARCHAR(20),
+  Cedula VARCHAR(20),
+  Email VARCHAR(100),
+  Password VARCHAR(100),
+  PRIMARY KEY (Id_usuario),
+  CONSTRAINT fk_usuario_tipo_usuario FOREIGN KEY (Id_tipo_usuario)
+    REFERENCES tipo_usuario (Id_tipo_usuario)
+) ENGINE=InnoDB;
+
+
