@@ -2,7 +2,7 @@
 class Rutas {
     protected $urlBase;
 
-    // Cambia la URL base según la ruta de tu proyecto
+    // Cambia la URL base según la ruta del proyecto
     public function __construct(string $urlBase = 'http://localhost/evidencia') {
         $this->urlBase = rtrim($urlBase, '/');
     }
@@ -12,7 +12,7 @@ class Rutas {
         return $this->urlBase;
     }
 
-    // Retorna la URL del frontend (ajusta si tienes carpeta frontend diferente)
+    // Retorna la URL del frontend
     public function getUrlFront(): string {
         return $this->urlBase;
     }
